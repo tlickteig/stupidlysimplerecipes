@@ -20,40 +20,72 @@
                 src: url(/font/fontawesome/fa_brands_400.ttf);
             }
 
+            @font-face {
+                font-family: Patrick-Hand;
+                src: url(/font/patrick_hand/PatrickHand-Regular.ttf);
+            }
+
+            @font-face {
+                font-family: Quicksand-SemiBold;
+                src: url(/font/quicksand/static/Quicksand-SemiBold.ttf);
+            }
+
+            body {
+                background-color: #fff8dc;
+            }
+
+            .fixed-top {
+                background-color: #fff8dc;
+            }
+
+            .dvContentBlock {
+                background-color: #fffaf0;
+                padding: 1em;
+                border: 2px solid #2f4f4f;
+                border-radius: 10px;
+                box-shadow: 10px 10px 10px grey;
+            }
+
             #dvContainer {
                 margin: auto;
-                width: 50%;
-                padding: 10px;
+                max-width: 1000px;
+                padding: 3em;
             }
         </style>
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid col-lg-10">
-                    <a class="navbar-brand" href="/">Stupidly Simple Recipes!</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <span style="font-family: Fa-Regular">&#xf2e7;</span>
-                                    Recipes
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Item one</a></li>
-                                    <li><a class="dropdown-item" href="#">Item two</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+            <div class="fixed-top">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid col-lg-10">
+                        <a class="navbar-brand" href="/" style="font-family: Patrick-Hand;">
+                            <h3>Stupidly Simple Recipes!</h3>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                        style="font-family: Quicksand-SemiBold;">
+                                        <span style="font-family: Fa-Regular">&#xf2e7;</span>
+                                        Recipes
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Item one</a></li>
+                                        <li><a class="dropdown-item" href="#">Item two</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </header>
+        <br />
         <div id="dvContainer">
             {{ content }}
         </div>
